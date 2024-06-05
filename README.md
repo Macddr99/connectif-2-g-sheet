@@ -13,8 +13,9 @@ This CLI (Command Line Interface) allows generating and downloading Data Explore
 - Node.js (v20 or higher)
 - A Google account with access to Google Sheets.
 - Google Sheets API Enabled
-- Google Service Account Credentials API
-- A Connectif API key with the scopes "Read" and "Write" of "Exports"
+- Google Service Account Credentials API. Link to instructions <https://developers.google.com/workspace/guides/create-credentials#create_a_service_account>
+- A Connectif API key with permission to "Read" and "Write" exports. Link to instructions <https://api-docs.connectif.cloud/connectif-api/guides/authentication>
+
 
 ## Installation
 
@@ -62,4 +63,8 @@ This command will generate a report for January 2023, download it, extract it an
 - The range between fromDate and toDate cannot be greater than 31 days.
 - Ensure that the Google credentials file has the necessary permissions to access and modify Google Sheets.
 - Ensure that the Google Sheets file is shared with the email address of the service account associated to the Google Sheets API Key.
+- You can find the spreadsheet ID in a Google Sheets URL:
+`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- You can find the Connectif report ID in a Data Explorer URL:
+`https://eu1.connectif.cloud/store/00000000000000/data-explorer-report/connectifReportId`
 - The script automatically handles downloading and extracting the ZIP file from Connectif.
