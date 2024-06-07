@@ -2,11 +2,14 @@
 
 This CLI (Command Line Interface) allows generating and downloading Data Explorer reports from Connectif, and then uploading them to Google Sheets. It is ideal for automating the data extraction and spreadsheet update process.
 
+
 ## Features
 
+- Easily add Connectif Data Explorer reports to Looker Studio, Power BI, or other, by setting up the Google Sheet as a data source.
 - Generates reports from Connectif using the API.
 - Downloads and extracts ZIP files containing the reports in CSV format.
 - Uploads CSV data to Google Sheets, allowing both the creation of new sheets and updating existing ones.
+
 
 ## Requirements
 
@@ -25,6 +28,7 @@ This CLI (Command Line Interface) allows generating and downloading Data Explore
 ```
 $ npm install -i connectif-2-g-sheets -g
 ```
+
 
 ## Usage
 
@@ -56,7 +60,6 @@ This command will generate a report for January 2023, download and extract it, a
 connectif-2-g-sheets -k YOUR_CONNECTIF_API_KEY -c ./path/to/credentials.json -s YOUR_SPREADSHEET_ID -r YOUR_REPORT_ID -f report.csv -o 2023-01-01 -t 2023-01-31 -a -e SHEET_NAME -d 'C:\Users\YOUR_USER'
 ```
 This command will generate a report for January 2023, download it, extract it and then upload it to an existing sheet called SHEET_NAME adding the report data.
-
 
 
 ## Notes
