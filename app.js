@@ -96,7 +96,7 @@ async function getReportFileUrl(reportId) {
             if (status === 'queued') {
                 progress = (progress + 1) % 100;
                 progressBar.update(progress);
-                console.log(`The report status is 'queued'. Waiting 3 second before trying again.`);
+                console.log(`The report status is 'queued'. Waiting 5 second before trying again.`);
 
                 if (Date.now() - startTime > maxWaitTime) {
                     console.error('Timed out while getting report file URL.');
@@ -104,7 +104,7 @@ async function getReportFileUrl(reportId) {
                     return null;
                 }
 
-                await new Promise(resolve => setTimeout(resolve, 3000));
+                await new Promise(resolve => setTimeout(resolve, 5000));
                 continue;
             }
 
@@ -187,7 +187,7 @@ async function importCsvToGoogleSheets(csvFilePath, addToNewSpreadsheet, appendT
 
             .on('end', async () => {
                 if (addToNewSpreadsheet) {
-
+                    rows.push([]);
                     try {
                     const addSheetResponse = await sheets.spreadsheets.batchUpdate({
                         spreadsheetId: spreadsheetId,
