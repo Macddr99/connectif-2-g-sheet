@@ -1,6 +1,6 @@
 {
   "name": "connectif-2-g-sheets",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CLI to automate upload or append Data Explorer Report to Google Sheets",
   "main": "app.js",
   "bin" :{
